@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
-import Button from '../../buttons/btnNavigation/btnNavigation';
+import Button from '../../components/buttons/btnNavigation/btnNavigation';
 import { useNavigation } from '@react-navigation/native';
 
 export default function DetailsScreen() {
