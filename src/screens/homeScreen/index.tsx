@@ -1,22 +1,28 @@
-import { useNavigation } from '@react-navigation/native';
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import imgHomeBackground from '../../../assets/imgHomeBackground/homeBackground.jpg';
+import {View, ImageBackground} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
+
 import Button from '../../components/buttons/btnNavigation/btnNavigation';
+import styles from './style';
 
+const route = 'Details';
 export default function HomeScreen() {
-    const { navigate } = useNavigation();
-    function handleNavigation() {
-        navigate('Details');
-    }
+  const {navigate} = useNavigation();
 
+  function handleNavigation() {
+    navigate('Details');
+  }
 
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
-            <Button title='Go to Details' onPress={handleNavigation} />
-        </View>
-    )
-
+  return (
+    <View style={styles.container}>
+      <ImageBackground
+        source={imgHomeBackground}
+        resizeMode="cover"
+        style={styles.image}>
+        <Button title="FIND CHARACTERS" onPress={handleNavigation} />
+      </ImageBackground>
+    </View>
+  );
 }
-
-
