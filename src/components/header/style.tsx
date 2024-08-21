@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
+  viewContainer: {
     flex: 1,
+    paddingTop: 40,
   },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
+  logo: {
+    width: '86%',
+    alignSelf: 'center',
+    paddingTop: 40,
   },
 });
 
