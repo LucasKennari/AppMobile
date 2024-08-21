@@ -1,28 +1,24 @@
 import React from 'react';
 import imgHomeBackground from '../../../assets/imgHomeBackground/homeBackground.jpg';
-import {View, ImageBackground} from 'react-native';
+import {ImageBackground, SafeAreaView} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
 import Button from '../../components/buttons/btnNavigation/btnNavigation';
 import styles from './style';
 
-const route = 'Details';
 export default function HomeScreen() {
   const {navigate} = useNavigation();
 
-  function handleNavigation() {
+  function handleFindCharacters() {
     navigate('Details');
   }
 
   return (
-    <View style={styles.container}>
-      <ImageBackground
-        source={imgHomeBackground}
-        resizeMode="cover"
-        style={styles.image}>
-        <Button title="FIND CHARACTERS" onPress={handleNavigation} />
+    <SafeAreaView style={styles.container}>
+      <ImageBackground source={imgHomeBackground} style={styles.image}>
+        <Button title="FIND CHARACTERS" onPress={handleFindCharacters} />
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 }
