@@ -1,9 +1,10 @@
 import React, {Text, TouchableOpacity, View} from 'react-native';
 
 import styles from './style';
+
 type ButtonProps = {
   title?: string;
-  onPress: () => void;
+  onPress?: () => void;
 };
 
 export default function Button({onPress, title}: ButtonProps) {
